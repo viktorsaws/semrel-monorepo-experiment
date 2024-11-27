@@ -1,3 +1,10 @@
+# [viktorsaws-test-server-v1.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.0...test-server/v1.0.1) (2024-11-27)
+
+
+### Bug Fixes
+
+* **test-server:** add NEW export ([e8742fc](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/e8742fc99a548ed099886eebf78e5c6ae1878b5e))
+
 # viktorsaws-test-server-v1.0.0 (2024-11-27)
 
 
