@@ -22,6 +22,6 @@ const props: RuntimeProps = {
         QNetTransformServerTokenProxy,
         QChatServerProxy,
     ],
-    name: 'AWS CodeWhisperer',
+    name: 'Amazon Q Server',
 }
 standalone(props)
