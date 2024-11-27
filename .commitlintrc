@@ -6,7 +6,8 @@
             "always",
             [
                 "test-app",
-                "test-server"
+                "test-server",
+                "release"
             ]
         ]
     }

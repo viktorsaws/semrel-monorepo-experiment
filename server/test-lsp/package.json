@@ -1,5 +1,5 @@
 {
-    "name": "@viktors/test-server",
+    "name": "viktorsaws-test-server",
     "version": "0.0.1",
     "description": "Test Server",
     "main": "out/index.js",

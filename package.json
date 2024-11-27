@@ -1,5 +1,5 @@
 {
-    "name": "@viktors/semrel-experiment-monorepo",
+    "name": "@viktorsaws/semrel-experiment-monorepo",
     "version": "1.0.0",
     "private": true,
     "workspaces": [
