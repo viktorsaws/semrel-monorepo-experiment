@@ -8,7 +8,7 @@ on:
             - 'app/test-app/**'
 jobs:
     release:
-        uses: ./.github/workflows/release-base.yaml
+        uses: ./.github/workflows/release-base.yml
         with:
             dir: 'app/test-app'
         secrets: inherit

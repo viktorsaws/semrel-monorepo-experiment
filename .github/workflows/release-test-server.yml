@@ -9,7 +9,7 @@ on:
 
 jobs:
     release:
-        uses: ./.github/workflows/release-base.yaml
+        uses: ./.github/workflows/release-base.yml
         with:
             dir: 'server/test-server'
         secrets: inherit
