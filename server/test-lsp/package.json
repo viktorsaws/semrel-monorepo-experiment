@@ -1,7 +1,7 @@
 {
-    "name": "@aws/hello-world-lsp",
+    "name": "@viktors/test-server",
     "version": "0.0.1",
-    "description": "Hello World Server",
+    "description": "Test Server",
     "main": "out/index.js",
     "scripts": {
         "package": "tsc --build"
