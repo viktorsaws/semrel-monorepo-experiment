@@ -1,6 +1,10 @@
 {
     "name": "viktorsaws-test-app",
     "version": "1.0.0",
+    "files": [
+        "build",
+        "out"
+    ],
     "scripts": {
         "clean": "rm -rf out/ bin/ tsconfig.tsbuildinfo",
         "compile": "tsc --build",

@@ -1,7 +1,9 @@
 {
     "name": "viktorsaws-test-server",
     "version": "0.0.1",
-    "description": "Test Server",
+    "files": [
+        "out"
+    ],
     "main": "out/index.js",
     "scripts": {
         "package": "tsc --build"
