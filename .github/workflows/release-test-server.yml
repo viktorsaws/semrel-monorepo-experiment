@@ -1,0 +1,13 @@
+name: Release test-server
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    publish:
+        uses: ./.github/workflows/release-base.yaml
+        with:
+            dir: 'server/test-server'
+        secrets: inherit

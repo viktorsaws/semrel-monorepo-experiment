@@ -1,0 +1,13 @@
+name: Release test-app
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    publish:
+        uses: ./.github/workflows/release-base.yaml
+        with:
+            dir: 'app/test-app'
+        secrets: inherit

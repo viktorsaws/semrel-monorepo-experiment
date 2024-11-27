@@ -1,6 +1,6 @@
 export const releaseConfig = tagFormat => ({
     extends: 'semantic-release-monorepo',
-    branches: ['release_improvements'],
+    branches: ['main'],
     plugins: [
         [
             '@semantic-release/commit-analyzer',
@@ -17,7 +17,7 @@ export const releaseConfig = tagFormat => ({
                 tarballDir: 'out',
             },
         ],
-        // '@semantic-release/github', // Creates new Github Release
+        '@semantic-release/github', // Creates new Github Release
         '@semantic-release/git',
     ],
     tagFormat: tagFormat,
