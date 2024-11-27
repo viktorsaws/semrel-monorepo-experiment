@@ -1,3 +1,10 @@
+# [viktorsaws-test-app-v1.1.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v1.0.0...test-app/v1.1.0) (2024-11-27)
+
+
+### Features
+
+* **test-server:** release new feature ([#1](https://github.com/viktorsaws/semrel-monorepo-experiment/issues/1)) ([549ac28](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/549ac28ed5111f4face675d08042fcb984ba4a3f))
+
 # viktorsaws-test-app-v1.0.0 (2024-11-27)
 
 
