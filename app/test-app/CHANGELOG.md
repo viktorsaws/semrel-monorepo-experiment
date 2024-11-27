@@ -1,0 +1,7 @@
+# viktorsaws-test-app-v1.0.0 (2024-11-27)
+
+
+### Bug Fixes
+
+* **test-app:** initial commit ([2c44bb5](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/2c44bb582ef288ded76eeaf8dfe111bac387e7fa))
+* **test-app:** initial release ([5bf78df](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/5bf78dfbb5d3d1a9f924c21c03ae01a4354a2d49))
