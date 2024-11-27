@@ -21,5 +21,5 @@ export const releaseConfig = tagFormat => ({
         '@semantic-release/git',
     ],
     tagFormat: tagFormat,
-    dryRun: true,
+    dryRun: false,
 })
