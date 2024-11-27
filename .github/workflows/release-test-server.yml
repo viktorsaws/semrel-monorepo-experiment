@@ -1,11 +1,11 @@
-name: Release test-server
+name: Release test-lsp server
 
 on:
     push:
         branches:
             - main
         paths:
-            - 'server/test-server/**'
+            - 'server/test-lsp/**'
 
 jobs:
     release:
@@ -16,5 +16,5 @@ jobs:
             id-token: write # to enable use of OIDC for npm provenance
         uses: ./.github/workflows/release-base.yml
         with:
-            dir: 'server/test-server'
+            dir: 'server/test-lsp'
         secrets: inherit
