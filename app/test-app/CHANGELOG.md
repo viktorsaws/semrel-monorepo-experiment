@@ -1,3 +1,10 @@
+# [viktorsaws-test-app-v1.2.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v1.1.0...test-app/v1.2.0) (2024-11-27)
+
+
+### Features
+
+* **test-app:** change server name to Amazon Q ([718507c](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/718507ccb3c430d99af95cd832622eaa13e76a00))
+
 # [viktorsaws-test-app-v1.1.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v1.0.0...test-app/v1.1.0) (2024-11-27)
 
 
