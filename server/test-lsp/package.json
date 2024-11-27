@@ -1,0 +1,12 @@
+{
+    "name": "@aws/hello-world-lsp",
+    "version": "0.0.1",
+    "description": "Hello World Server",
+    "main": "out/index.js",
+    "scripts": {
+        "package": "tsc --build"
+    },
+    "dependencies": {
+        "@aws/language-server-runtimes": "^0.2.27"
+    }
+}

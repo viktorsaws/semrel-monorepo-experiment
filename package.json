@@ -1,0 +1,33 @@
+{
+    "name": "@viktors/semrel-experiment-monorepo",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "app/*",
+        "server/*"
+    ],
+    "scripts": {
+        "commitlint": "commitlint --edit",
+        "prepare": "husky .husky",
+        "package": "npm run package --workspaces --if-present"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "typescript": "^5.5.3"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.5.0",
+        "@commitlint/config-conventional": "^19.5.0",
+        "@semantic-release/changelog": "^6.0.3",
+        "@semantic-release/git": "^10.0.1",
+        "@types/node": "^22.9.0",
+        "conventional-changelog-conventionalcommits": "^8.0.0",
+        "husky": "^9.1.1",
+        "semantic-release": "^24.2.0",
+        "semantic-release-monorepo": "^8.0.2",
+        "shx": "^0.3.4",
+        "ts-node": "^10.9.1"
+    }
+}
