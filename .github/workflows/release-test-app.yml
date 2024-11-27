@@ -4,9 +4,10 @@ on:
     push:
         branches:
             - main
-
+        paths:
+            - 'app/test-app/**'
 jobs:
-    publish:
+    release:
         uses: ./.github/workflows/release-base.yaml
         with:
             dir: 'app/test-app'
