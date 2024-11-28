@@ -1,3 +1,15 @@
+# [viktorsaws-test-server-v2.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.1...test-server/v2.0.0) (2024-11-28)
+
+
+### Features
+
+* **test-server:** remove exports of constants ([a1c93a5](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/a1c93a585c6a874dc901898ac61df439b0fdc025))
+
+
+### BREAKING CHANGES
+
+* **test-server:** The exports of NEW and WORLD constants were removed.
+
 # [viktorsaws-test-server-v1.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.0...test-server/v1.0.1) (2024-11-27)
 
 
