@@ -1,4 +1,4 @@
-export const releaseConfig = (tagFormat, packageName) => ({
+export const releaseConfig = (packageName) => ({
     extends: 'semantic-release-monorepo',
     branches: ['main'],
     plugins: [
@@ -13,6 +13,6 @@ export const releaseConfig = (tagFormat, packageName) => ({
             message: 'chore(release): ' + packageName + ' ${nextRelease.version} [skip ci]'
         }]
     ],
-    tagFormat: tagFormat,
+    tagFormat: packageName + '/v${version}',
     dryRun: false,
 })
