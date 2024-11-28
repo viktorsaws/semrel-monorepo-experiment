@@ -1,4 +1,4 @@
-name: Release test-app
+name: Release All Packages
 
 on:
     push:
