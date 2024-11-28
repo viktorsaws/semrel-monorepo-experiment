@@ -1,0 +1,30 @@
+name: Release test-app
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - 'app/test-app/**'
+            - 'app/test-lsp/**'
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+    release:
+        permissions:
+            contents: write # to be able to publish a GitHub release
+            issues: write # to be able to comment on released issues
+            pull-requests: write # to be able to comment on released pull requests
+            id-token: write # to enable use of OIDC for npm provenance
+        strategy:
+            max-parallel: 1 # To overcome race conditions when 1 push may trigger release in more than 1 package
+            matrix:
+                dir:
+                    - 'app/test-app'
+                    - 'app/test-lsp'
+        uses: ./.github/workflows/release-base.yml
+        with:
+            dir: ${{ matrix.dir }}
+        secrets: inherit
