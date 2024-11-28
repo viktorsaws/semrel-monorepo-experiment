@@ -8,13 +8,8 @@ import {
     QNetTransformServerTokenProxy,
 } from '@aws/lsp-codewhisperer/out/language-server/proxy-server'
 
-const MAJOR = 0
-const MINOR = 1
-const PATCH = 0
-const VERSION = `${MAJOR}.${MINOR}.${PATCH}`
-
 const props: RuntimeProps = {
-    version: VERSION,
+    version: '1.1.1',
     servers: [
         CodeWhispererServerTokenProxy,
         CodeWhispererSecurityScanServerTokenProxy,
