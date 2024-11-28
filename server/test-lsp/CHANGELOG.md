@@ -1,3 +1,11 @@
+# [viktorsaws-test-server-v2.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.0.0...test-server/v2.0.1) (2024-11-28)
+
+
+### Bug Fixes
+
+* add change 2 to LSP Server ([258a780](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/258a780195eaac85a4add40e0f4c9607c9fb55ea))
+* **test-server:** add change 1 to server ([ac306dd](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/ac306dd31e883229f9eb808792a711d5be471f63))
+
 # [viktorsaws-test-server-v2.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.1...test-server/v2.0.0) (2024-11-28)
 
 
