@@ -1,6 +1,6 @@
 {
     "name": "viktorsaws-test-app",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "files": [
         "build",
         "out"
