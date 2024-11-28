@@ -6,7 +6,7 @@ on:
             - main
         paths:
             - 'app/test-app/**'
-            - 'app/test-lsp/**'
+            - 'server/test-lsp/**'
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
@@ -23,7 +23,7 @@ jobs:
             matrix:
                 dir:
                     - 'app/test-app'
-                    - 'app/test-lsp'
+                    - 'server/test-lsp'
         uses: ./.github/workflows/release-base.yml
         with:
             dir: ${{ matrix.dir }}
