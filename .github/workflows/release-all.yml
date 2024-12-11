@@ -5,12 +5,16 @@ env:
   HUSKY: 0
 
 on:
-    push:
-        branches:
-            - main
-        paths:
-            - 'app/test-app/**'
-            - 'server/test-lsp/**'
+    # push: # Trigger on every merge to main
+    #     branches:
+    #         - main
+    #     paths:
+    #         - 'app/test-app/**'
+    #         - 'server/test-lsp/**'
+    workflow_dispatch: # manual trigger
+    schedule:
+        - cron: '00 10 * * THU'
+
 
 # Allow only 1 pending workflow run to be scheduled
 concurrency:
