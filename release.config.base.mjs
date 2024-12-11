@@ -5,7 +5,9 @@ export const releaseConfig = (packageName) => ({
         ['@semantic-release/commit-analyzer', {
             preset: 'conventionalcommits',
         }],
-        '@semantic-release/release-notes-generator',
+        ['@semantic-release/release-notes-generator', {
+            preset: 'conventionalcommits',
+        }],
         '@semantic-release/changelog',
         '@semantic-release/npm',
         '@semantic-release/github', // Creates new Github Release
