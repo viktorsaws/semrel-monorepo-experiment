@@ -6,3 +6,4 @@ export * from './language-server/helloWorldServer'
 // Change 4
 // Change 5
 // Change 5.1: Patch
+// Change 6
