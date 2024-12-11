@@ -1,0 +1,4 @@
+{
+    "app/test-app": "3.0.1",
+    "server/test-lsp": "3.1.0"
+}

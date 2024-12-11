@@ -1,0 +1,14 @@
+{
+    "bootstrap-sha": "91c4d053bb6b6a795d8a8718dd7784b45259efac",
+    "bump-minor-pre-major": true,
+    "bump-patch-for-minor-pre-major": true,
+    "always-link-local": false,
+    "separate-pull-requests": false,
+    "plugins": ["node-workspace"],
+    "packages": {
+        "app/test-app": {
+        },
+        "server/test-lsp": {
+        }
+    }
+}
