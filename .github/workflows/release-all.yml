@@ -3,9 +3,9 @@ name: Release All Packages
 # Disable commit hooks in CI
 env:
   HUSKY: 0
-  GIT_AUTHOR_NAME: '@automation-bot'
+  GIT_AUTHOR_NAME: '@aws-language-servers-automation'
   GIT_AUTHOR_EMAIL: 'aws-language-server-runtimes-automation@amazon.com'
-  GIT_COMMITTER_NAME: '@automation-bot'
+  GIT_COMMITTER_NAME: '@aws-language-servers-automation'
   GIT_COMMITTER_EMAIL: 'aws-language-server-runtimes-automation@amazon.com'
 
 on:
@@ -16,8 +16,8 @@ on:
     #         - 'app/test-app/**'
     #         - 'server/test-lsp/**'
     workflow_dispatch: # manual trigger
-    schedule:
-        - cron: '00 10 * * THU'
+    # schedule:
+    #     - cron: '00 10 * * THU'
 
 
 # Allow only 1 pending workflow run to be scheduled
