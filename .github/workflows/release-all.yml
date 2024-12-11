@@ -3,6 +3,10 @@ name: Release All Packages
 # Disable commit hooks in CI
 env:
   HUSKY: 0
+  GIT_AUTHOR_NAME: '@automation-bot'
+  GIT_AUTHOR_EMAIL: 'aws-language-server-runtimes-automation@amazon.com'
+  GIT_COMMITTER_NAME: '@automation-bot'
+  GIT_COMMITTER_EMAIL: 'aws-language-server-runtimes-automation@amazon.com'
 
 on:
     # push: # Trigger on every merge to main
