@@ -14,11 +14,11 @@ export const releaseConfig = (packageName) => ({
         // ['@semantic-release/git', {
         //     message: 'chore(release): ' + packageName + ' ${nextRelease.version} [skip ci]'
         // }][
-        ["semantic-release-github-pullrequest", {
-            'assets': ['CHANGELOG.md', 'package.json', '../package-lock.json'],
-            'baseRef': 'main',
-            'pullrequestTitle': 'chore(release): ' + packageName + ' ${nextRelease.version} [skip ci]'
-        }
+        // ["semantic-release-github-pullrequest", {
+        //     'assets': ['CHANGELOG.md', 'package.json', '../package-lock.json'],
+        //     'baseRef': 'main',
+        //     'pullrequestTitle': 'chore(release): ' + packageName + ' ${nextRelease.version} [skip ci]'
+        // }
     ]
     ],
     tagFormat: packageName + '/v${version}',
