@@ -1,3 +1,13 @@
+# [viktorsaws-test-app-v3.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v2.0.0...test-app/v3.0.0) (2024-12-11)
+
+
+* feat(test-app)!: change 12 ([af8c4b6](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/af8c4b67d11e5cb7c2f2c924066c00feaf5ea4f4))
+
+
+### BREAKING CHANGES
+
+* this is test of new breaking changer
+
 # [viktorsaws-test-app-v2.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v1.4.0...test-app/v2.0.0) (2024-12-02)
 
 
