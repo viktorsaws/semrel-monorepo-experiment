@@ -10,6 +10,9 @@
         "app/test-app": {
             "component": "test-app"
         },
+        "app/second-app": {
+            "component": "second-app"
+        },
         "server/test-lsp": {
             "component": "test-server"
         }

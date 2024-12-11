@@ -1,0 +1,23 @@
+{
+    "name": "viktorsaws-second-app",
+    "version": "0.1.0",
+    "files": [
+        "build",
+        "out"
+    ],
+    "scripts": {
+        "clean": "rm -rf out/ bin/ tsconfig.tsbuildinfo",
+        "compile": "tsc --build",
+        "package": "npm run compile && npm run webpack",
+        "webpack": "webpack"
+    },
+    "dependencies": {
+        "@aws/language-server-runtimes": "^0.2.27",
+        "@aws/lsp-codewhisperer": "*"
+    },
+    "devDependencies": {
+        "ts-loader": "^9.4.4",
+        "webpack": "^5.94.0",
+        "webpack-cli": "^5.1.4"
+    }
+}
