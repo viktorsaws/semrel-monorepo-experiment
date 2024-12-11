@@ -1,18 +1,27 @@
-# [viktorsaws-test-server-v2.1.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.1.0...test-server/v2.1.1) (2024-11-28)
+# Changelog
+
+## [3.1.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v3.1.0...test-server/v3.1.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* **test-server:** small bugfix ([072b5d6](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/072b5d6b3d310da666f6f953c1f7ff5f85c38901))
+
+## [viktorsaws-test-server-v2.1.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.1.0...test-server/v2.1.1) (2024-11-28)
 
 
 ### Bug Fixes
 
 * **test-server:** add server change 5 ([fc6e036](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/fc6e036437fc0dd245245cbb4daf250454e36179))
 
-# [viktorsaws-test-server-v2.1.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.0.1...test-server/v2.1.0) (2024-11-28)
+## [viktorsaws-test-server-v2.1.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.0.1...test-server/v2.1.0) (2024-11-28)
 
 
 ### Features
 
 * **test-server:** add change 4 ([697ecc4](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/697ecc4f07b3b60ad3bc6d869d03d94ab39fbfa9))
 
-# [viktorsaws-test-server-v2.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.0.0...test-server/v2.0.1) (2024-11-28)
+## [viktorsaws-test-server-v2.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v2.0.0...test-server/v2.0.1) (2024-11-28)
 
 
 ### Bug Fixes
@@ -20,7 +29,7 @@
 * add change 2 to LSP Server ([258a780](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/258a780195eaac85a4add40e0f4c9607c9fb55ea))
 * **test-server:** add change 1 to server ([ac306dd](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/ac306dd31e883229f9eb808792a711d5be471f63))
 
-# [viktorsaws-test-server-v2.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.1...test-server/v2.0.0) (2024-11-28)
+## [viktorsaws-test-server-v2.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.1...test-server/v2.0.0) (2024-11-28)
 
 
 ### Features
@@ -32,14 +41,14 @@
 
 * **test-server:** The exports of NEW and WORLD constants were removed.
 
-# [viktorsaws-test-server-v1.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.0...test-server/v1.0.1) (2024-11-27)
+## [viktorsaws-test-server-v1.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v1.0.0...test-server/v1.0.1) (2024-11-27)
 
 
 ### Bug Fixes
 
 * **test-server:** add NEW export ([e8742fc](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/e8742fc99a548ed099886eebf78e5c6ae1878b5e))
 
-# viktorsaws-test-server-v1.0.0 (2024-11-27)
+## viktorsaws-test-server-v1.0.0 (2024-11-27)
 
 
 ### Bug Fixes

@@ -1,5 +1,5 @@
 {
-    "app/test-app": "3.0.1",
-    "app/second-app": "0.1.0",
-    "server/test-lsp": "3.1.0"
+    "app/test-app": "4.0.0",
+    "app/second-app": "0.1.1",
+    "server/test-lsp": "3.1.1"
 }
