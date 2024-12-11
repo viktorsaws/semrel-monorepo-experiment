@@ -1,3 +1,10 @@
+# [viktorsaws-test-app-v3.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v3.0.0...test-app/v3.0.1) (2024-12-11)
+
+
+### Bug Fixes
+
+* **test-app:** feature 13 ([672a946](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/672a946dc036bb27298ea0785db7eb2b721b5e4f))
+
 # [viktorsaws-test-app-v3.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v2.0.0...test-app/v3.0.0) (2024-12-11)
 
 
