@@ -5,10 +5,14 @@
     "always-link-local": false,
     "separate-pull-requests": false,
     "plugins": ["node-workspace"],
+    "tag-separator": "/",
     "packages": {
         "app/test-app": {
+            "component": "test-app"
         },
         "server/test-lsp": {
+            "component": "test-server"
         }
-    }
+    },
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
 }
