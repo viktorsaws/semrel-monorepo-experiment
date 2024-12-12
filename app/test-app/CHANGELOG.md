@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v4.0.1...test-app/v4.1.0) (2024-12-12)
+
+
+### Features
+
+* **test-app:** change 16 ([8ee643e](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/8ee643e28e95836a9d01bda6de606f23b5d29fd1))
+
 ## [4.0.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v4.0.0...test-app/v4.0.1) (2024-12-11)
 
 
