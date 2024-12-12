@@ -6,7 +6,10 @@
     "separate-pull-requests": true,
     "group-pull-request-title-pattern": "chore(release): release packages from branch ${branch}",
     "pull-request-title-pattern": "chore(release): release ${component} v${version}",
-    "plugins": ["node-workspace"],
+    "plugins": [{
+        "type": "node-workspace",
+        "considerAllArtifacts": true
+    }],
     "tag-separator": "/",
     "include-v-in-tag": true,
     "packages": {
