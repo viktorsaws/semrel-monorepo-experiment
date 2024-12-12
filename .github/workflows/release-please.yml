@@ -31,7 +31,7 @@ jobs:
       - name: Generate output
         id: set-outputs
         run: |
-          echo 'result=${{ toJson(steps.release.outputs) }}' >> $GITHUB_OUTPUT
+          echo 'result=\'${{ toJson(steps.release.outputs) }}\'' >> $GITHUB_OUTPUT
   
   publish-to-npm:
     needs: release-please
