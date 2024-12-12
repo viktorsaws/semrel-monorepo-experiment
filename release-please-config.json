@@ -8,6 +8,7 @@
     "pull-request-title-pattern": "chore(release): release ${component} v${version}",
     "plugins": ["node-workspace"],
     "tag-separator": "/",
+    "include-v-in-tag": true,
     "packages": {
         "app/test-app": {
             "component": "test-app"
