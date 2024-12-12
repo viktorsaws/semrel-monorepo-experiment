@@ -20,6 +20,7 @@ jobs:
       releases_created: ${{ steps.set-outputs.outputs.releases_created }}
       paths_released: ${{ steps.set-outputs.outputs.paths_released }}
       paths_released2: ${{ steps.release.outputs.paths_released }}
+      releases_created2: ${{ steps.release.outputs.releases_created }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
@@ -58,15 +59,15 @@ jobs:
         run: npm run test
       - name: Package deployment artifacts
         run: npm run package
-      # - run: npm publish --workspace app/test-app
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #   if: ${{ fromJson(needs.release-please.outputs.result['app/test-app--release_created']) }}
-      # - run: npm publish --workspace app/second-app
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #   if: ${{ fromJson(needs.release-please.outputs.result['app/second-app--release_created']) }}
-      # - run: npm publish --workspace server/test-lsp
-      #   env:
-      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #   if: ${{ fromJson(needs.release-please.outputs.result['server/test-lsp--release_created']) }}
+      - run: npm publish --workspace app/test-app
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ fromJson(needs.release-please.outputs.paths_released['app/test-app--release_created']) }}
+      - run: npm publish --workspace app/second-app
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ fromJson(needs.release-please.outputs.paths_released['app/second-app--release_created']) }}
+      - run: npm publish --workspace server/test-lsp
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ fromJson(needs.release-please.outputs.paths_released2['server/test-lsp--release_created']) }}
