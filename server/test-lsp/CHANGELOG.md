@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.2](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v3.1.1...test-server/v3.1.2) (2024-12-12)
+
+
+### Bug Fixes
+
+* **test-server:** slmall change ([592e349](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/592e34989de9745b58e17598a100aaeb02732372))
+
 ## [3.1.1](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v3.1.0...test-server/v3.1.1) (2024-12-11)
 
 
