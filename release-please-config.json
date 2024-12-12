@@ -3,7 +3,7 @@
     "bump-minor-pre-major": true,
     "bump-patch-for-minor-pre-major": true,
     "always-link-local": false,
-    "separate-pull-requests": true,
+    "separate-pull-requests": false,
     "group-pull-request-title-pattern": "chore(release): release packages from branch ${branch}",
     "pull-request-title-pattern": "chore(release): release ${component} v${version}",
     "plugins": [{
