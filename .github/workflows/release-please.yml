@@ -17,7 +17,9 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      result: ${{ steps.set-outputs.outputs.result }}
+      releases_created: ${{ steps.set-outputs.outputs.releases_created }}
+      paths_released: ${{ steps.set-outputs.outputs.paths_released }}
+      paths_released2: ${{ steps.release.outputs.paths_released }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
@@ -31,13 +33,14 @@ jobs:
       - name: Generate output
         id: set-outputs
         run: |
-          echo "result=$(echo ${{ toJson(steps.release.outputs) }} | jq -c '.')" >> $GITHUB_OUTPUT
+          echo "releases_created=${{ steps.release.outputs.releases_created }}" >> $GITHUB_OUTPUT
+          echo "paths_released=${{ toJson(steps.release.outputs.paths_released) }}" >> $GITHUB_OUTPUT
   
   publish-to-npm:
     needs: release-please
     # Only trigger after release-please managed PR from previous step is merged to main.
     # Note: using of `fromJson` is required due to bug https://github.com/googleapis/release-please-action/issues/912
-    if: ${{ fromJson(needs.release-please.outputs.result.releases_created) }}
+    if: ${{ fromJson(needs.release-please.outputs.releases_created) }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -55,15 +58,15 @@ jobs:
         run: npm run test
       - name: Package deployment artifacts
         run: npm run package
-      - run: npm publish --workspace app/test-app
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(needs.release-please.outputs.result['app/test-app--release_created']) }}
-      - run: npm publish --workspace app/second-app
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(needs.release-please.outputs.result['app/second-app--release_created']) }}
-      - run: npm publish --workspace server/test-lsp
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(needs.release-please.outputs.result['server/test-lsp--release_created']) }}
+      # - run: npm publish --workspace app/test-app
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   if: ${{ fromJson(needs.release-please.outputs.result['app/test-app--release_created']) }}
+      # - run: npm publish --workspace app/second-app
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   if: ${{ fromJson(needs.release-please.outputs.result['app/second-app--release_created']) }}
+      # - run: npm publish --workspace server/test-lsp
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      #   if: ${{ fromJson(needs.release-please.outputs.result['server/test-lsp--release_created']) }}
