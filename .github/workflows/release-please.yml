@@ -26,26 +26,26 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
-        if: ${{ steps.release.outputs.release_created }}
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
           #   scope: '@viktorsaws'
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Install dependencies
         run: npm clean-install
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Test
         run: npm run test
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Package deployment artifacts
         run: npm run package
-        if: ${{ steps.release.outputs.releases_created }}
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - run: npm publish --workspace app/test-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ steps.release.outputs['app/test-app--release_created'] }}
+        if: ${{ fromJson(steps.release.outputs['app/test-app--release_created']) }}
       - run: npm publish --workspace app/second-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
