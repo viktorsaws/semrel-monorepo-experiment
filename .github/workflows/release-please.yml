@@ -9,65 +9,47 @@ permissions:
   contents: write
   pull-requests: write
 
-env:
-  ACTIONS_STEP_DEBUG: true
-
 jobs:
-  # Job to merge release PR to main and update packages versions
   release-please:
     runs-on: ubuntu-latest
-    outputs:
-      releases_created: ${{ steps.set-outputs.outputs.releases_created }}
-      paths_released: ${{ steps.set-outputs.outputs.paths_released }}
-      paths_released2: ${{ steps.release.outputs.paths_released }}
-      releases_created2: ${{ steps.release.outputs.releases_created }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
-          # this assumes that you have created a personal access token
-          # (PAT) and configured it as a GitHub action secret named
-          # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-      - name: Generate output
-        id: set-outputs
-        run: |
-          echo "releases_created=${{ steps.release.outputs.releases_created }}" >> $GITHUB_OUTPUT
-          echo 'paths_released=${{ toJson(steps.release.outputs.paths_released) }}' >> $GITHUB_OUTPUT
-  
-  publish-to-npm:
-    needs: release-please
-    # Only trigger after release-please managed PR from previous step is merged to main.
-    # Note: using of `fromJson` is required due to bug https://github.com/googleapis/release-please-action/issues/912
-    if: ${{ fromJson(needs.release-please.outputs.releases_created) }}
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           persist-credentials: false
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org'
           #   scope: '@viktorsaws'
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
+      - name: Set token
+        run: echo "NODE_AUTH_TOKEN=${{ secrets.NPM_TOKEN }}" >> $GITHUB_ENV
       - name: Install dependencies
         run: npm clean-install
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Test
         run: npm run test
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Package deployment artifacts
         run: npm run package
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - run: npm publish --workspace app/test-app
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(needs.release-please.outputs.paths_released['app/test-app--release_created']) }}
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs['app/test-app--release_created'] }}
       - run: npm publish --workspace app/second-app
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(needs.release-please.outputs.paths_released['app/second-app--release_created']) }}
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs['app/second-app--release_created'] }}
       - run: npm publish --workspace server/test-lsp
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(needs.release-please.outputs.paths_released2['server/test-lsp--release_created']) }}
+        # env:
+        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs['server/test-lsp--release_created'] }}
