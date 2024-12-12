@@ -32,6 +32,7 @@ jobs:
         if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Set token
         run: echo "NODE_AUTH_TOKEN=${{ secrets.NPM_TOKEN }}" >> $GITHUB_ENV
+        if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - name: Install dependencies
         run: npm clean-install
         if: ${{ fromJson(steps.release.outputs.releases_created) }}
@@ -42,14 +43,8 @@ jobs:
         run: npm run package
         if: ${{ fromJson(steps.release.outputs.releases_created) }}
       - run: npm publish --workspace app/test-app
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs['app/test-app--release_created'] }}
       - run: npm publish --workspace app/second-app
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs['app/second-app--release_created'] }}
       - run: npm publish --workspace server/test-lsp
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs['server/test-lsp--release_created'] }}
