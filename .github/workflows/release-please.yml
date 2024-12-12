@@ -34,7 +34,7 @@ jobs:
         id: set-outputs
         run: |
           echo "releases_created=${{ steps.release.outputs.releases_created }}" >> $GITHUB_OUTPUT
-          echo "paths_released=${{ toJson(steps.release.outputs.paths_released) }}" >> $GITHUB_OUTPUT
+          echo 'paths_released=${{ toJson(steps.release.outputs.paths_released) }}' >> $GITHUB_OUTPUT
   
   publish-to-npm:
     needs: release-please
