@@ -48,7 +48,7 @@ jobs:
       - run: npm publish --workspace app/test-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ fromJson(steps.release.outputs['app/test-app--release_created']) }}
+        if: ${{ steps.release.outputs['app/test-app--release_created'] }}
       - run: npm publish --workspace app/second-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
