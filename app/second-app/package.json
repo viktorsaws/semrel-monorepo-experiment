@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@aws/language-server-runtimes": "^0.2.27",
-        "@aws/lsp-codewhisperer": "*"
+        "viktorsaws-test-server": "*"
     },
     "devDependencies": {
         "ts-loader": "^9.4.4",
