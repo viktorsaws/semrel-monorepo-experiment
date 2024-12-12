@@ -17,7 +17,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
-      result: ${{ steps.release.outputs }}
+      result: ${{ steps.release.outputs.result }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
