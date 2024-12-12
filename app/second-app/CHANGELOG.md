@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/second-app/v0.1.2...second-app/v0.1.3) (2024-12-12)
+
+
+### Bug Fixes
+
+* small fix in second app ([978a782](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/978a78284da17e24661126198faf3f36b54871ba))
+
 ## [0.1.2](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/second-app/v0.1.1...second-app/v0.1.2) (2024-12-11)
 
 
