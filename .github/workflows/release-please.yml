@@ -28,10 +28,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+      - name: Generate output
+        run: |
+          echo 'result=${{ toJson(steps.release.outputs) }}' >> $GITHUB_OUTPUT
   
   publish-to-npm:
     needs: release-please
     # Only trigger after release-please managed PR from previous step is merged to main.
+    # Note: using of `fromJson` is required due to bug https://github.com/googleapis/release-please-action/issues/912
     if: ${{ fromJson(needs.release-please.outputs.result.releases_created) }}
     runs-on: ubuntu-latest
     steps:
@@ -53,12 +57,12 @@ jobs:
       - run: npm publish --workspace app/test-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ needs.release-please.outputs.result['app/test-app--release_created'] }}
+        if: ${{ fromJson(needs.release-please.outputs.result['app/test-app--release_created']) }}
       - run: npm publish --workspace app/second-app
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ needs.release-please.outputs.result['app/second-app--release_created'] }}
+        if: ${{ fromJson(needs.release-please.outputs.result['app/second-app--release_created']) }}
       - run: npm publish --workspace server/test-lsp
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        if: ${{ needs.release-please.outputs.result['server/test-lsp--release_created'] }}
+        if: ${{ fromJson(needs.release-please.outputs.result['server/test-lsp--release_created']) }}
