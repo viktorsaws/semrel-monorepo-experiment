@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.0.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v3.1.3...test-server/v4.0.0) (2024-12-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* breaking something in server package
+
+### Features
+
+* new change [#10](https://github.com/viktorsaws/semrel-monorepo-experiment/issues/10) ([2fd71f6](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/2fd71f6b61594f93cc72e65d1d9340cda259802f))
+
 ## [3.1.3](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-server/v3.1.2...test-server/v3.1.3) (2024-12-12)
 
 

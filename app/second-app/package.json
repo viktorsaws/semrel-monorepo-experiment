@@ -1,6 +1,6 @@
 {
     "name": "viktorsaws-second-app",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "files": [
         "build",
         "out"
@@ -13,7 +13,7 @@
     },
     "dependencies": {
         "@aws/language-server-runtimes": "^0.2.27",
-        "viktorsaws-test-server": "*"
+        "viktorsaws-test-server": "4.0.0"
     },
     "devDependencies": {
         "ts-loader": "^9.4.4",
