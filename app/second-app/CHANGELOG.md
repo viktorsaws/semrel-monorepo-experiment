@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.1.6](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/second-app/v0.1.5...second-app/v0.1.6) (2024-12-13)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * viktorsaws-test-server bumped from * to 4.0.0
+
 ## [0.1.5](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/second-app/v0.1.4...second-app/v0.1.5) (2024-12-12)
 
 

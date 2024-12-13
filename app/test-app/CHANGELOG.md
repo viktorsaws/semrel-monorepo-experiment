@@ -1,5 +1,17 @@
 # Changelog
 
+## [4.2.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v4.1.0...test-app/v4.2.0) (2024-12-13)
+
+
+### Features
+
+* **test-app:** release a feature 18 ([50d271c](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/50d271cbf5c43e54766d20ea9f9df1bc5159fb7d))
+
+
+### Bug Fixes
+
+* **test-app:** add change 17 ([e8e6a96](https://github.com/viktorsaws/semrel-monorepo-experiment/commit/e8e6a96b85a99770567f51c626dff2093e4cf885))
+
 ## [4.1.0](https://github.com/viktorsaws/semrel-monorepo-experiment/compare/test-app/v4.0.1...test-app/v4.1.0) (2024-12-12)
 
 
